@@ -20,6 +20,9 @@ https://github.com/ualter/spring-reactive-webflux
 https://github.com/reactor/reactor-core
 
 
+#####################################################################
+
+https://github.com/dboissier/mongo4idea
 
 
 
