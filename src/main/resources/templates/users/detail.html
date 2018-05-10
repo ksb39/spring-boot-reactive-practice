@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User detail</title>
+    <style>
+        table {
+            border: double 1px
+        }
+        tr {
+            border: solid 1px;
+        }
+        td {
+            border: solid 1px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    {{#user}}
+    <p>
+        id : {{id}}<br/>
+        name : {{name}}<br/>
+        phone : {{phone}}<br/>
+        website : {{website}}<br/>
+    </p>
+    {{/user}}
+</div>
+</body>
+</html>
