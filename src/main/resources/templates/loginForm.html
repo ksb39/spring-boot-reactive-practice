@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{{>layout/header}}
+<div>
+    <h4>
+        login
+    </h4>
     <div>
-        <h4>
-            login
-        </h4>
-        <div>
-            <form action='/login' method='POST'>
-                <fieldset>
-                    <label for="username">username</label>
-                    <input type="text" name="username" id="username" />
-                    <label for="password">password</label>
-                    <input type="text" name="password" id="password" />
-                    <button type="submit">login</button>
-                </fieldset>
-            </form>
-        </div>
+        <form action='/login' method='POST'>
+            <fieldset>
+                <label for="username">username</label>
+                <input type="text" name="username" id="username" />
+                <label for="password">password</label>
+                <input type="text" name="password" id="password" />
+                <button type="submit">login</button>
+            </fieldset>
+        </form>
     </div>
-</body>
-</html>
+</div>
+{{>layout/footer}}

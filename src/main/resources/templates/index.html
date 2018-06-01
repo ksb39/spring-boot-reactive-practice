@@ -1,22 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{{>layout/header}}
+<div class="container mb-5">
+    <h4>
+        logout
+    </h4>
     <div>
-        <h4>
-            logout
-        </h4>
-        <div>
-            <form action='/logout' method='GET'>
-                <button type="submit">logout</button>
-            </form>
-        </div>
+        <form action='/logout' method='GET'>
+            <button type="submit">logout</button>
+        </form>
     </div>
-    <div>
-        INDEX INDEX INDEX INDEX INDEX
-    </div>
-</body>
-</html>
+</div>
+<div class="container mb-5">
+    <form action='/' method='POST'>
+        title : <input type="text" name="title" />
+        content : <input type="text" name="content" />
+        author : <input type="text" name="author" />
+        <button type="submit">create post</button>
+    </form>
+</div>
+<div class="container mb-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#postList}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{content}}</td>
+                <td>{{author}}</td>
+            </tr>
+            {{/postList}}
+        </tbody>
+    </table>
+</div>
+{{>layout/footer}}
