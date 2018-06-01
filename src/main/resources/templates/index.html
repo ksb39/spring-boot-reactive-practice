@@ -39,4 +39,24 @@
         </tbody>
     </table>
 </div>
+<div class="container mb-5">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Head</th>
+            <th>Body</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#taskList}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{head}}</td>
+            <td>{{body}}</td>
+        </tr>
+        {{/taskList}}
+        </tbody>
+    </table>
+</div>
 {{>layout/footer}}

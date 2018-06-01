@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import static com.example.demo.config.CommonUtils.passwordEncoder;
+import static com.example.demo.util.CommonUtils.passwordEncoder;
 
 @Data
 @NoArgsConstructor
@@ -23,13 +23,6 @@ public class User extends BaseEntity {
         setEmail(email);
         setPassword(passwordEncoder.encode(plainPassword));
         setRole(role);
-    }
-
-    public User(String email, String plainPassword, Role role, boolean deleted) {
-        setEmail(email);
-        setPassword(passwordEncoder.encode(plainPassword));
-        setRole(role);
-        setDelete(deleted);
     }
 
     @Override

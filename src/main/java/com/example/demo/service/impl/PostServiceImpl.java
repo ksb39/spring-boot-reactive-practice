@@ -16,7 +16,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Mono<Post> create(Post post) {
-        return postRepository.insert(post);
+        return Mono.just(postRepository.insert(post).block());
     }
 
     @Override
@@ -53,5 +53,4 @@ public class PostServiceImpl implements PostService {
             postRepository.save(post).subscribe();
         }).flatMap(post -> Mono.just(Boolean.TRUE));
     }
-
 }
