@@ -20,7 +20,6 @@ public class TestServiceTests {
 	public void contextLoads() {
 	}
 
-
 	@Test
 	public void test1() {
 		Flux<String> flux = Flux.just("red", "white", "blue");

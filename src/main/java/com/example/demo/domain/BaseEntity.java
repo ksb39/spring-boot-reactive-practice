@@ -1,4 +1,4 @@
-package com.example.demo.document;
+package com.example.demo.domain;
 
 import lombok.Getter;
 import lombok.Setter;

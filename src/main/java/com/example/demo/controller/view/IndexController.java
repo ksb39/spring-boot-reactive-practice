@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/web")
-public class WebController {
+public class IndexController {
 
-    @RequestMapping(method = RequestMethod.GET, value="/index")
+    @RequestMapping(method = RequestMethod.GET)
     public String index() {
         return "index";
     }
